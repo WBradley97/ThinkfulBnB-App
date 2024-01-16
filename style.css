@@ -1,0 +1,202 @@
+/* -------  General Styles ------- */
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 10px 10px 10px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  section.alternate-background {
+    background-color: #00a699;
+    color: #fff;
+  }
+
+   img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* ---  Groups & Items --- */
+
+  .group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .item-double {
+    flex: 2;
+  }
+
+  /* -------  Navigation ------- */
+
+  header {
+    background-color: #ff385c;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+  }
+
+  .logo {
+    font-family: "Pangolin", cursive;
+    font-size: 72px;
+    color: #fff;
+  }
+
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  header nav ul li {
+    list-style-type: none;
+  }
+
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px 0 0;
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+
+  /* -------  Search Form ------- */
+  form {
+    border: 2px solid #ff385c;
+    padding: 20px;
+  }
+
+  form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  form label {
+    font-weight: bold;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 20px;
+    width: 180px;
+  }
+
+  form button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 15px;
+    width: 100%;
+  }
+
+
+  /* ------- About ------- */
+  #about img {
+    padding: 20px 0;
+  }
+
+
+  /* -------  Footer ------- */
+
+  footer {
+    background-color: #ff385c;
+  }
+
+  footer p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+/* ... Existing CSS ... */
+
+/* 350px screen width */
+@media all and (max-width: 350px) {
+  header {
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+}
+
+/* 768px screen width */
+@media all and (min-width: 768px) {
+  #stay form {
+    padding: 0;
+  }
+
+  #stay div {
+    padding: 10px;
+  }
+
+  #about .about-inner-content {
+    text-align: left;
+  }
+
+  #about p {
+    width: auto;
+  }
+
+  #about img {
+    width: auto;
+    padding: 20px 0;
+  }
+
+  #ideas .ideas-container {
+    width: auto;
+    margin: 40px 0;
+  }
+
+  #ideas img {
+    width: auto;
+    padding: 20px;
+  }
+
+  #ideas .forests,
+  #ideas .beaches {
+    flex-direction: row;
+  }
+
+  #ideas .invis-mobile,
+  #ideas .rustic-cabins,
+  #ideas .pet-friendly {
+    display: inline-block;
+  }
+
+  #host img {
+    width: auto;
+    padding: 20px;
+  }
+}
