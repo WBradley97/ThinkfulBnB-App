@@ -197,8 +197,6 @@ footer p {
     width: 250px;
     padding: 30px;
   }
-
-  /* ------- Ideas ------- */
 }
 
 @media all and (min-width: 800px) {
@@ -228,6 +226,17 @@ footer p {
 }
 
   /* ------- Ideas ------- */
+
+  @media all and (min-width: 800px) {
+    #ideas .ideas-container {
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+    }
+
+    #ideas img {
+      width: 48%; /* Adjust width as needed for a 2 by 2 grid */
+      margin: 1%; /* Adjust margin for spacing between images */
+    }
+  }
 
   #ideas .ideas-container {
     display: flex;
@@ -264,6 +273,8 @@ footer p {
   }
 
   /* ------- Host ------- */
+
+
   #host {
     display: flex;
     align-items: center;
