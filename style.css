@@ -189,41 +189,40 @@ footer p {
   }
 
   /* ------- About ------- */
+  #about {
+    padding: 30px;
+    position: relative; /* Make the parent container position:relative */
+  }
+
+  #about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #ff0000; /* Red color for the line */
+  }
+
   #about .about-inner-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #about p {
+    width: 50%;
     text-align: center;
+    align-self: center;
   }
 
   #about img {
     width: 250px;
-    padding: 30px;
+    padding: 10px;
   }
-}
-
-@media all and (min-width: 800px) {
-  /* ------- About ------- */
-
-#about {
-  padding: 30px;
-}
-
-#about .about-inner-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-}
-
-#about p {
-  width: 50%;
-  text-align: center; /* Center align the text */
-  align-self: center; /* Vertically center the text */
-}
-
-#about img {
-  width: 250px;
-  padding: 10px;
-}
 
   /* ------- Ideas ------- */
 
@@ -246,31 +245,56 @@ footer p {
   }
 
   #ideas img {
-    width: 350px;
+    width: 48%;
+    margin: 1%;
+  }
+
+  #ideas img {
+    width: 300px; /* Updated size for desktop view */
     padding: 20px;
   }
 
-  #ideas .forests {
-    display: flex;
-    flex-direction: column;
-  }
-
+  #ideas .forests,
   #ideas .beaches {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   #ideas .invis-mobile {
-    display: inline-block;
-  }
-
-  #ideas .rustic-cabins {
     display: none;
   }
 
+  #ideas .rustic-cabins,
   #ideas .pet-friendly {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
+
+  /* Additional styles for image names in desktop view */
+  #ideas .image-name {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333; /* Adjust color as needed */
+  }
+
+
+
+/* ------- About ------- */
+#about {
+  padding: 30px;
+  position: relative;
+
+}
+
+
+
+
+
+
+
+
+
+
 
   /* ------- Host ------- */
 
@@ -288,5 +312,12 @@ footer p {
 
   #host img {
     width: 50%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  /* ------- Header ------- */
+  header nav ul li {
+    padding: 0 12px;
   }
 }
