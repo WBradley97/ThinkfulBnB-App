@@ -2,6 +2,9 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -87,6 +90,7 @@ header nav ul li a:hover {
 }
 
 /* ------- Search Form ------- */
+
 form {
   border: 2px solid #ff385c;
   padding: 20px;
@@ -122,13 +126,90 @@ form .select {
 }
 
 /* ------- About ------- */
+
+#about {
+  padding: 30px;
+  position: relative;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #ff0000;
+}
+
+#about .about-inner-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+#about p {
+  width: 50%;
+  text-align: center;
+  align-self: center;
+}
+
 #about img {
-  padding: 20px 0;
+  width: 250px;
+  padding: 10px;
 }
 
 /* ------- Ideas ------- */
+
 #ideas .invis-mobile {
   display: none;
+}
+
+@media all and (min-width: 768px) {
+  #ideas .ideas-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
+    justify-content: space-between;
+    width: 900px;
+    margin: 40px auto;
+  }
+
+  #ideas img {
+    width: 48%;
+    margin: 1%;
+  }
+
+  #ideas img {
+    width: 300px;
+    padding: 20px;
+  }
+
+  #ideas .forests,
+  #ideas .beaches {
+    flex-direction: row;
+    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
+  }
+
+  #ideas .invis-mobile {
+    display: none;
+  }
+
+  #ideas .rustic-cabins,
+  #ideas .pet-friendly {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
+  }
+
+  #ideas .image-name {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+  }
 }
 
 /* ------- Footer ------- */
@@ -143,9 +224,41 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+/* ------- Host ------- */
+
+@media all and (min-width: 768px) {
+  #host {
+    display: flex;
+    align-items: center;
+  }
+
+  #host .host-group {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #host img {
+    width: 50%;
+  }
+
   /* ------- Header ------- */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header nav ul li {
+    padding: 0 12px;
+  }
+}
+
+/* ------- Stay ------- */
+
+@media all and (min-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
@@ -160,7 +273,6 @@ footer p {
     padding: 0 8px;
   }
 
-  /* ------- Stay ------- */
   #stay form {
     display: flex;
     flex-wrap: wrap;
@@ -187,137 +299,8 @@ footer p {
     align-items: center;
     padding: 10px 5px;
   }
-
-  /* ------- About ------- */
-  #about {
-    padding: 30px;
-    position: relative; /* Make the parent container position:relative */
-  }
-
-  #about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 2px;
-    background-color: #ff0000; /* Red color for the line */
-  }
-
-  #about .about-inner-content {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  #about p {
-    width: 50%;
-    text-align: center;
-    align-self: center;
-  }
-
-  #about img {
-    width: 250px;
-    padding: 10px;
-  }
-
-  /* ------- Ideas ------- */
-
-  @media all and (min-width: 800px) {
-    #ideas .ideas-container {
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
-    }
-
-    #ideas img {
-      width: 48%; /* Adjust width as needed for a 2 by 2 grid */
-      margin: 1%; /* Adjust margin for spacing between images */
-    }
-  }
-
-  #ideas .ideas-container {
-    display: flex;
-    justify-content: space-between;
-    width: 900px;
-    margin: 40px auto;
-  }
-
-  #ideas img {
-    width: 48%;
-    margin: 1%;
-  }
-
-  #ideas img {
-    width: 300px; /* Updated size for desktop view */
-    padding: 20px;
-  }
-
-  #ideas .forests,
-  #ideas .beaches {
-    flex-direction: row;
-  }
-
-  #ideas .invis-mobile {
-    display: none;
-  }
-
-  #ideas .rustic-cabins,
-  #ideas .pet-friendly {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Additional styles for image names in desktop view */
-  #ideas .image-name {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333; /* Adjust color as needed */
-  }
-
-
-
-/* ------- About ------- */
-#about {
-  padding: 30px;
-  position: relative;
-
 }
 
-
-
-
-
-
-
-
-
-
-
-  /* ------- Host ------- */
-
-
-  #host {
-    display: flex;
-    align-items: center;
-  }
-
-  #host .host-group {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  #host img {
-    width: 50%;
-  }
-}
-
-@media all and (min-width: 768px) {
-  /* ------- Header ------- */
-  header nav ul li {
-    padding: 0 12px;
-  }
+body, html {
+  overflow-x: hidden;
 }
