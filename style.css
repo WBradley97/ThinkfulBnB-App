@@ -37,22 +37,6 @@ img {
   width: 100%;
 }
 
-/* --- Groups & Items --- */
-
-.group {
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-}
-
 /* ------- Navigation ------- */
 
 header {
@@ -125,8 +109,7 @@ form .select {
   display: inline-block;
 }
 
-/* ------- About ------- */
-
+/* --- About --- */
 #about {
   padding: 30px;
   position: relative;
@@ -145,16 +128,14 @@ form .select {
 
 #about .about-inner-content {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
-#about p {
-  width: 50%;
-  text-align: center;
-  align-self: center;
+#about .about-images {
+  display: flex;
+  align-items: center;
 }
 
 #about img {
@@ -162,53 +143,67 @@ form .select {
   padding: 10px;
 }
 
-/* ------- Ideas ------- */
-
-#ideas .invis-mobile {
-  display: none;
+#about p {
+  width: 50%;
+  text-align: left;
+  margin-left: 20px;
 }
 
+/* Media query for mobile view */
+@media all and (max-width: 767px) {
+  #about .about-inner-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .about-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about img {
+    width: 100%;
+  }
+
+  #about p {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* Adjust about section for mobile view */
+  .about-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ------- Ideas ------- */
 @media all and (min-width: 768px) {
   #ideas .ideas-container {
+    /* Adjust styles for both mobile and desktop views */
     display: flex;
-    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
-    justify-content: space-between;
-    width: 900px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 40px auto;
   }
 
-  #ideas img {
-    width: 48%;
-    margin: 1%;
-  }
-
-  #ideas img {
-    width: 300px;
-    padding: 20px;
-  }
-
-  #ideas .forests,
-  #ideas .beaches {
-    flex-direction: row;
-    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
-  }
-
-  #ideas .invis-mobile {
-    display: none;
-  }
-
-  #ideas .rustic-cabins,
-  #ideas .pet-friendly {
+  .ideas-group {
+    /* Adjust styles for both mobile and desktop views */
+    width: 45%;
+    margin: 2.5%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap; /* Ensure flex items wrap to the next line */
+    align-items: center;
   }
 
-  #ideas .image-name {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
-    color: #333;
+  #ideas img {
+    /* Additional styles for both mobile and desktop views */
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    padding: 20px;
   }
 }
 
@@ -259,20 +254,7 @@ footer p {
 /* ------- Stay ------- */
 
 @media all and (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 30px;
-  }
-
-  header nav ul li {
-    padding: 0 8px;
-  }
-
+  /* Additional styles for desktop view */
   #stay form {
     display: flex;
     flex-wrap: wrap;
